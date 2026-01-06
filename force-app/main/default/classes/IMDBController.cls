@@ -12,6 +12,7 @@ public with sharing class IMDBController {
             req.setEndpoint('callout:IMDB/imdb/imdbSearchByName?query=' + searchText);
             req.setMethod('GET');
             req.setTimeout(10000);
+            //req.setHeader('authorization', 'apikey');
             
 
             HttpResponse res = http.send(req);
